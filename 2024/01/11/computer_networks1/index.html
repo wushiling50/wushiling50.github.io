@@ -1,0 +1,244 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>计算机网络_一 | wushiling50's Blog</title><meta name="author" content="wushiling50"><meta name="copyright" content="wushiling50"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="计算机网络的笔记第一部分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络_一">
+<meta property="og:url" content="https://wushiling50.github.io/2024/01/11/computer_networks1/index.html">
+<meta property="og:site_name" content="wushiling50&#39;s Blog">
+<meta property="og:description" content="计算机网络的笔记第一部分">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2024/01/03/PzWqFHtTkrXL8KY.jpg">
+<meta property="article:published_time" content="2024-01-11T14:06:00.000Z">
+<meta property="article:modified_time" content="2024-01-11T14:06:19.188Z">
+<meta property="article:author" content="wushiling50">
+<meta property="article:tag" content="计算机基础">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/01/03/PzWqFHtTkrXL8KY.jpg"><link rel="shortcut icon" href="https://s2.loli.net/2024/01/03/Sk6rQiMqbxAXyKf.png"><link rel="canonical" href="https://wushiling50.github.io/2024/01/11/computer_networks1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计算机网络_一',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-11 22:06:19'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2024/01/02/bhezZY4OPAFDHd2.jpg" onerror="onerror=null;src='https://s2.loli.net/2022/01/13/lsqSbINmozkPFpM.png'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2024/01/03/PzWqFHtTkrXL8KY.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="wushiling50's Blog"><span class="site-name">wushiling50's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机网络_一</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-11T14:06:00.000Z" title="发表于 2024-01-11 22:06:00">2024-01-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-11T14:06:19.188Z" title="更新于 2024-01-11 22:06:19">2024-01-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="计算机网络_一"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><p>这是本人用于记录自己学习计网的学习笔记，可能计录的内容不够全面充分，如果能对你产生帮助，我很荣幸。学习的内容来自于B站的视频课程<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1NT411g7n6/?spm_id_from=333.337.search-card.all.click&vd_source=5d280a67462b7e244704b583db4dd16b">深入浅出计算机网络 微课视频</a>。</p>
+<h1 id="一、计算机网络体系结构"><a href="#一、计算机网络体系结构" class="headerlink" title="一、计算机网络体系结构"></a>一、计算机网络体系结构</h1><h2 id="1-1-计算机网络概述"><a href="#1-1-计算机网络概述" class="headerlink" title="1.1 计算机网络概述"></a>1.1 计算机网络概述</h2><h3 id="1-、网络、互联网、因特网的区别与关系"><a href="#1-、网络、互联网、因特网的区别与关系" class="headerlink" title="(1)、网络、互联网、因特网的区别与关系"></a>(1)、网络、互联网、因特网的区别与关系</h3><ul>
+<li>若干节点和链路互连形成<strong>网络</strong>(节点：电脑，服务器、交换机等；链路：有线与无线。)</li>
+<li>若干网络通过路由器互连形成<strong>互联网</strong></li>
+<li><strong>因特网</strong>是当今世界上最大的互联网</li>
+<li>有时并没有严格区分互联网（internet）与因特网（Internet）这两个名词，但是要注意，互联网可以使用任意通信协议，而因特网必须使用TCP&#x2F;IP协议族作为通信规则。</li>
+</ul>
+<hr>
+<h3 id="2-、因特网简介"><a href="#2-、因特网简介" class="headerlink" title="(2)、因特网简介"></a>(2)、因特网简介</h3><p><strong>发展：</strong><br><img src="https://s2.loli.net/2024/01/10/YtJhDumFkVEq6zs.png" alt="QQ截图20240110202136.png"></p>
+<p><strong>因特网服务提供者（ISP）</strong><br>ISP从因特网管理机构申请到成块的IP地址，同时拥有通信线路以及路由器等联网设备，任何单位或个人都可以通过ISP接入到因特网。<br>我国的ISP：中国电信、中国移动、中国联通  </p>
+<p>因特网已发展成为基于ISP的多层次结构的互连网络。（ISP层级：国际级–区域或国家级–本地级–……）  </p>
+<p><strong>因特网的管理机构：</strong><br><img src="https://s2.loli.net/2024/01/10/vyBXikRDPuHMwqz.png" alt="QQ截图20240110203335.png">  </p>
+<p><strong>因特网的标准化工作：</strong><br><img src="https://s2.loli.net/2024/01/10/UNhTkYpSDe8Iq3E.png" alt="QQ截图20240110203301.png"> </p>
+<p><strong>因特网的组成：</strong><br><img src="https://s2.loli.net/2024/01/10/iKN61fXQwLSy92q.png" alt="QQ截图20240110203453.png">  </p>
+<hr>
+<h3 id="3-、电路交换、分组交换以及报文交换"><a href="#3-、电路交换、分组交换以及报文交换" class="headerlink" title="(3)、电路交换、分组交换以及报文交换"></a>(3)、电路交换、分组交换以及报文交换</h3><p><strong>电路交换：</strong><br><strong>(PS：用于传送计算机数据时线路的传输效率很低)</strong>  </p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://s2.loli.net/2024/01/10/ILtK5O8Gi4nCMe3.png" alt="QQ截图20240110210753.png"></h2><p><strong>分组交换：</strong><br><img src="https://s2.loli.net/2024/01/10/PlAw6dHUj9JCQMi.png" alt="QQ截图20240110211912.png"><br>报文：将主机与主机之间用于通信的消息的整块数据表示为一个报文，传输时注意报文长度，过长需要划分成若干个较小的等长数据段同时添加由必要控制信息组成的首部。</p>
+<p>首部的作用：包含分组的目的地址，用于转发分组。  </p>
+<p>信息的传递：构造分组，发送分组–&gt;交换节点<strong>缓存分组</strong>并读取首部地址，查找转发表，<strong>转发</strong>给下一个交换节点–&gt;经过多个节点后到达目标主机，目标主机将首部取出，将分组拼回原始报文。(最简单的情况)  </p>
+<p>优缺点：  </p>
+<h2 id="-1"><a href="#-1" class="headerlink" title="  "></a><img src="https://s2.loli.net/2024/01/10/SNqomZdnsPUv7Xp.png" alt="QQ截图20240110212451.png">  </h2><p><strong>报文交换：</strong>  </p>
+<h2 id="-2"><a href="#-2" class="headerlink" title=""></a><img src="https://s2.loli.net/2024/01/10/ByZP8nhz5JNjwex.png" alt="QQ截图20240110212557.png"></h2><p><strong>三种交换比较：</strong><br><img src="https://s2.loli.net/2024/01/10/VrBi8pmLCQbeMKH.png" alt="QQ截图20240110212924.png"><br><img src="https://s2.loli.net/2024/01/10/5AgFfUQrOKkPuW8.png" alt="QQ截图20240110212838.png">  </p>
+<h3 id="4-、计算机网络的定义与分类："><a href="#4-、计算机网络的定义与分类：" class="headerlink" title="(4)、计算机网络的定义与分类："></a>(4)、计算机网络的定义与分类：</h3><p>最简单定义：计算机网络是一些<strong>互连的、自治的（可以独立运行）、计算机的集合</strong>。<br>现阶段较好的定义：计算机网络主要是由一些通用的、<strong>可编程的硬件</strong>互连而成的，而这些硬件并非专门用来实现某一特定目的（例如：传送数据或视频信号）。这些可编程的硬件（包含CPU的硬件）能够用来传送多种不同类型的数据，并能支持广泛的和日益增长的应用。</p>
+<h2 id="分类：-按交换方式分类：电路交换、报文交换、分组交换-按使用者分类：公用网（Internet）、专用网（军队、铁路）-按传输介质分类：有线网络、无线网络-按覆盖范围分类：广域网（WAN）、城域网（MAN）、局域网（LAN）、个域网（PAN）-按拓扑结构分类：总线型、星型、环形、网状型"><a href="#分类：-按交换方式分类：电路交换、报文交换、分组交换-按使用者分类：公用网（Internet）、专用网（军队、铁路）-按传输介质分类：有线网络、无线网络-按覆盖范围分类：广域网（WAN）、城域网（MAN）、局域网（LAN）、个域网（PAN）-按拓扑结构分类：总线型、星型、环形、网状型" class="headerlink" title="分类：- 按交换方式分类：电路交换、报文交换、分组交换- 按使用者分类：公用网（Internet）、专用网（军队、铁路）- 按传输介质分类：有线网络、无线网络- 按覆盖范围分类：广域网（WAN）、城域网（MAN）、局域网（LAN）、个域网（PAN）- 按拓扑结构分类：总线型、星型、环形、网状型  "></a>分类：<br>- 按交换方式分类：电路交换、报文交换、分组交换<br>- 按使用者分类：公用网（Internet）、专用网（军队、铁路）<br>- 按传输介质分类：有线网络、无线网络<br>- 按覆盖范围分类：<code>广域网（WAN）</code>、城域网（MAN）、<code>局域网（LAN）</code>、个域网（PAN）<br>- 按拓扑结构分类：总线型、星型、环形、网状型  </h2><h3 id="5-、计算机网络的性能指标："><a href="#5-、计算机网络的性能指标：" class="headerlink" title="(5)、计算机网络的性能指标："></a>(5)、计算机网络的性能指标：</h3><p><strong>总览：</strong>  </p>
+<h2 id="-3"><a href="#-3" class="headerlink" title="  "></a><img src="https://s2.loli.net/2024/01/11/5QEsdrv7mOUFP3T.png" alt="QQ截图20240111102735.png">  </h2><ol>
+<li><p>速率<br>数据量单位与换算关系：<br><img src="https://s2.loli.net/2024/01/11/47WxJvLb6TPEtNZ.png" alt="QQ截图20240111102938.png"><br>速率单位与换算关系：<br><img src="https://s2.loli.net/2024/01/11/S7hZsP6qBgzCWFj.png" alt="QQ截图20240111103156.png"><br>对比：<br><img src="https://s2.loli.net/2024/01/11/ZwVPih2cXtOa6zS.png" alt="QQ截图20240111103233.png"><br>练习：<br><img src="https://s2.loli.net/2024/01/11/6fbEALBp1grjHF8.png" alt="QQ截图20240111103425.png"><br><em>（单位必须化成b、b&#x2F;s才能继续计算）</em></p>
+</li>
+<li><p>带宽<br>定义：<br> <img src="https://s2.loli.net/2024/01/11/ezYMduUgyX5Qb31.png" alt="QQ截图20240111103621.png"><br><em>（PS：线路的频率带宽越宽，其所传输数据的最高数据率也就越高。）</em>  </p>
+<p> 数据传输速率：（木桶效应）<br> <img src="https://s2.loli.net/2024/01/11/XuL82jZvD7SPGhi.png" alt="QQ截图20240111103921.png">  </p>
+</li>
+<li><p>吞吐量<br>定义：<br><img src="https://s2.loli.net/2024/01/11/Za2JmrO3Y5AlBLh.png" alt="QQ截图20240111130718.png"></p>
+</li>
+<li><p>时延（延迟、迟延）<br>定义：<br><img src="https://s2.loli.net/2024/01/11/ov9ujRdPBYah4xq.png" alt="QQ截图20240111130810.png"><br>时延的构成：<br><img src="https://s2.loli.net/2024/01/11/Z9qaIRNWSKj6wxv.png" alt="QQ截图20240111134741.png"><br><img src="https://s2.loli.net/2024/01/11/oBt1hcE59d3iHQP.png" alt="QQ截图20240111134825.png"><br><em>（PS：注意目的主机或路由器接受分组信号与分组信号在链路上传播是同时进行的，所以没有接受时延。）</em>  </p>
+<p> 光纤速度快的原因：带宽大  </p>
+<p> 时延图像分析：<br> EX1:<br> <img src="https://s2.loli.net/2024/01/11/smxOWafMTZ5VJ6n.png" alt="QQ截图20240111135020.png"><br> EX2:<br> <img src="https://s2.loli.net/2024/01/11/mzsVABPiv5kcX4j.png" alt="QQ截图20240111135050.png"><br> EX3:<br> <img src="https://s2.loli.net/2024/01/11/BWJ4pAycbktOdxT.png" alt="QQ截图20240111135117.png"><br> 例题：<br> <img src="https://s2.loli.net/2024/01/11/PpSn3JQMF9fWXbL.png" alt="QQ截图20240111135518.png"><br> <img src="https://s2.loli.net/2024/01/11/RJWOs26K5uABokZ.png" alt="QQ截图20240111140011.png"></p>
+</li>
+</ol>
+<p><em>（结论：发送时延与传播时延谁占主导应该根据不同情况具体分析。）</em><br>5. 时延带宽积（链路长度）<br>定义：<br><img src="https://s2.loli.net/2024/01/11/29atfHeLyCwqVXI.png" alt="QQ截图20240111151601.png"><br>EX：<br><img src="https://s2.loli.net/2024/01/11/IpGfAo2rvSzOuqE.png" alt="QQ截图20240111151717.png"><br>6. 往返时间（RTT）<br>定义：<br><img src="https://s2.loli.net/2024/01/11/qc3M2gRrIbHzNnT.png" alt="QQ截图20240111151906.png"><br>EX：<br>卫星链路带来的传播时延较大<br><img src="https://s2.loli.net/2024/01/11/SGVtTA47e9n28lp.png" alt="QQ截图20240111152330.png"><br><em>（PS：可以用ping命令去测试查看时间）</em><br>7. 利用率<br>分类：<br><img src="https://s2.loli.net/2024/01/11/srqB5CcIDUoeRYv.png" alt="QQ截图20240111152510.png"><br>公式：<br><img src="https://s2.loli.net/2024/01/11/V64wYzsiM9lbHq2.png" alt="QQ截图20240111152640.png"><br><img src="https://s2.loli.net/2024/01/11/E1grDK3LP49RMiq.png" alt="QQ截图20240111152736.png"><br><em>（PS：网络利用率应该保持在一定的范围内，不能过高，也不能过低。）</em><br>8. 丢包率<br>定义：<br><img src="https://s2.loli.net/2024/01/11/jUuLPtYvlS7pXqD.png" alt="QQ截图20240111152917.png"><br>分组丢失的情况：<br><img src="https://s2.loli.net/2024/01/11/HslMt9WRajy5KdV.png" alt="QQ截图20240111153121.png"></p>
+<hr>
+<h2 id="1-2-计算机网络体系结构与参考模型"><a href="#1-2-计算机网络体系结构与参考模型" class="headerlink" title="1.2 计算机网络体系结构与参考模型"></a>1.2 计算机网络体系结构与参考模型</h2><h3 id="（1）、常见的三种计算机体系结构"><a href="#（1）、常见的三种计算机体系结构" class="headerlink" title="（1）、常见的三种计算机体系结构"></a>（1）、常见的<code>三种</code>计算机体系结构</h3><p><strong>概览图：</strong><br><img src="https://s2.loli.net/2024/01/11/jyaVufE9LDOmwMC.png" alt="QQ截图20240111162445.png"></p>
+<p><strong>三个体系结构：</strong></p>
+<ol>
+<li>OSI参考模型&#x2F;OSI体系结构（经典7层）<br><img src="https://s2.loli.net/2024/01/11/X63YR1CMNWAgOLv.png" alt="QQ截图20240111162015.png"></li>
+<li>TCP&#x2F;IP参考模型（Internet使用，商业化）<br><img src="https://s2.loli.net/2024/01/11/R4jw2sPALOI9lCe.png" alt="QQ截图20240111162112.png"><br><img src="https://s2.loli.net/2024/01/11/5FywCXpQv6ne4TH.png" alt="QQ截图20240111162327.png"></li>
+<li>原理参考模型（教学用）</li>
+</ol>
+<h3 id="（2）、计算机网络体系结构分层的必要性"><a href="#（2）、计算机网络体系结构分层的必要性" class="headerlink" title="（2）、计算机网络体系结构分层的必要性"></a>（2）、计算机网络体系结构<code>分层的必要性</code></h3><p>分层可以将庞大复杂的问题转化为若干较小的局部问题，以便层层处理。</p>
+<p>两台计算机通过一条链路连接需要考虑的问题：</p>
+<ul>
+<li>采用什么传输媒体（介质）（同轴电缆、光纤、光缆等）（物理层之下）</li>
+<li>采用什么物理接口</li>
+<li>采用什么信号表示比特0和1（数字基带信号（只是用于理解的例子）：1为高电平，0为低电平）<strong>（划归到物理层）</strong></li>
+</ul>
+<p>总线型网络（早已淘汰）、交换式以太网、无线网络需要考虑的问题 <strong>（划归到数据链路层）</strong>：<br><img src="https://s2.loli.net/2024/01/11/aKkctq8ZyeFbGUu.png" alt="QQ截图20240111170456.png"><br><img src="https://s2.loli.net/2024/01/11/1qzQOChtdav9m25.png" alt="QQ截图20240111170118.png"><br><em>（PS：解决了物理层与数据链路层的问题，就可以实现一个数据包在一个网络上传输了。）</em></p>
+<p>在多个网络传输需要考虑的问题 <strong>（划归到网络层）</strong>：<br><img src="https://s2.loli.net/2024/01/11/bSchwDd5YnRMGPe.png" alt="QQ截图20240111171459.png"><br><em>（PS：解决了前面几层以及网络层的问题，就可以实现数据包在多个网络上传输了。）</em></p>
+<p>转发到应用进程需要考虑的问题 <strong>（划归到运输层）</strong>：<br><img src="https://s2.loli.net/2024/01/11/XQls6RJ4dr2Boaz.png" alt="QQ截图20240111173558.png"><br><em>（PS：解决了前面几层以及运输层的问题，就可以实现进程之间基于网络的通信了。）</em></p>
+<p>制定应用协议需要考虑的问题 <strong>（划归到应用层）</strong>：<br><img src="https://s2.loli.net/2024/01/11/6qPjHkRpi9WcvwJ.png" alt="QQ截图20240111173751.png"></p>
+<p>总结：<br><img src="https://s2.loli.net/2024/01/11/ScHOIvzxX8uglJ1.png" alt="QQ截图20240111174032.png"></p>
+<p>练习：<br><img src="https://s2.loli.net/2024/01/11/2grODNV97qBlzeT.png" alt="QQ截图20240111174227.png"></p>
+<h3 id="（3）、计算机网络体系结构分层思想举例"><a href="#（3）、计算机网络体系结构分层思想举例" class="headerlink" title="（3）、计算机网络体系结构分层思想举例"></a>（3）、计算机网络体系结构<code>分层思想举例</code></h3><p>EX：<br><img src="https://s2.loli.net/2024/01/11/5L9btNFPOlBVig3.png" alt="QQ截图20240111202611.png"></p>
+<ul>
+<li>主机中的应用层根据HTTP协议的规定构建一个HTTP请求报文，用于请求Web服务器执行相应操作。</li>
+<li>请求报文移交给运输层，运输层给请求报文添加一个TCP首部（用于区分应用进程，实现可靠传输），将其封装为TCP报文段。</li>
+<li>交付给网络层，网络层添加一个IP首部（IP寻址和路由），将其封装成为IP数据报，</li>
+<li>交付给数据链路层，数据链路层给IP数据报添加一个首部和尾部（用于MAC寻址和帧校验），将其封装成为以太网帧。<br><img src="https://s2.loli.net/2024/01/11/yDBAcdt1QR6YgHx.png" alt="QQ截图20240111203501.png"></li>
+<li>交付给物理层，物理层将帧看作比特流，将其转换为电信号进行发送。对于以太网，还会在比特流前添加前导码，目的是使接收方的时钟同步并做好接受准备。</li>
+<li>主机将电信号发送出去，路由器收到后，其物理层将电信号转换成比特流并去掉前导码，将帧交给链路层。</li>
+<li>数据链路层去掉首部尾部，将IP数据报交给网络层。</li>
+<li>网络层从IP数据报的首部中提取出目的IP地址，路由器根据IP地址查表转发该IP数据报，以便决定从那个接口转发。同时还要对首部中的某些字段值，例如TTL进行相应的修改然后向下传递并进行相同的封装后发送。</li>
+<li>服务器收到数据包后，自下向上逐层解封，在应用层收到HTTP报文后执行相应的操作，然后给主机发送含有请求内容的HTTP相应报文。</li>
+<li>然后按相似的流程返回。</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/01/11/1EAfdZtanbU8iRW.png" alt="QQ截图20240111210418.png"><br>练习题：<br><img src="https://s2.loli.net/2024/01/11/gnpBILTs4U7bKMw.png" alt="QQ截图20240111210939.png"></p>
+<h3 id="（4）、计算机网络体系结构中的专用术语"><a href="#（4）、计算机网络体系结构中的专用术语" class="headerlink" title="（4）、计算机网络体系结构中的专用术语"></a>（4）、计算机网络体系结构中的<code>专用术语</code></h3><p>分类：实体、协议、服务</p>
+<ul>
+<li><p>实体：<br><img src="https://s2.loli.net/2024/01/11/FReGAymMwVLODxz.png" alt="QQ截图20240111213526.png"></p>
+</li>
+<li><p>协议：<br><img src="https://s2.loli.net/2024/01/11/NU8m4lZYbwo1Piq.png" alt="QQ截图20240111213752.png"><br><em>（PS：逻辑通信并不存在，只是一种假设，方便单独研究某一层。）</em></p>
+<p>  语法：定义了域的长度与顺序。</p>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/01/11/oq97VDleLJ5FxrC.png" alt="QQ截图20240111213959.png"><br>语义：<br><img src="https://s2.loli.net/2024/01/11/FVMaJrSny3TexDZ.png" alt="QQ截图20240111214124.png"><br>同步：（在本例中必须先发送GET请求，服务器才能返回响应报文）</p>
+<ul>
+<li><p>服务：<br><img src="https://s2.loli.net/2024/01/11/vmtBzdDLCnGVgjP.png" alt="QQ截图20240111214522.png"><br><img src="https://s2.loli.net/2024/01/11/ucOEtoDdwplkHU6.png" alt="QQ截图20240111214612.png"><br><img src="https://s2.loli.net/2024/01/11/fsmykavqDCzAl4X.png" alt="QQ截图20240111214718.png"><br><img src="https://s2.loli.net/2024/01/11/92Nig1rhG53RYWk.png" alt="QQ截图20240111214907.png"><br><img src="https://s2.loli.net/2024/01/11/46fJOkYS57WtXhP.png" alt="QQ截图20240111214511.png"></p>
+</li>
+<li><p>练习：<br><img src="https://s2.loli.net/2024/01/11/WHAQrBDqneC1LkK.png" alt="QQ截图20240111215014.png"></p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://wushiling50.github.io">wushiling50</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://wushiling50.github.io/2024/01/11/computer_networks1/">https://wushiling50.github.io/2024/01/11/computer_networks1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://wushiling50.github.io" target="_blank">wushiling50's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2024/01/03/PzWqFHtTkrXL8KY.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/01/04/build-blog/" title="利用GitHub-Page+Hexo去搭建自己的博客"><img class="cover" src="https://s2.loli.net/2024/01/03/PzWqFHtTkrXL8KY.jpg" onerror="onerror=null;src='https://s2.loli.net/2022/01/13/lsqSbINmozkPFpM.png'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">利用GitHub-Page+Hexo去搭建自己的博客</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s2.loli.net/2024/01/02/bhezZY4OPAFDHd2.jpg" onerror="this.onerror=null;this.src='https://s2.loli.net/2022/01/13/lsqSbINmozkPFpM.png'" alt="avatar"/></div><div class="author-info__name">wushiling50</div><div class="author-info__description">须知少日拏云志,曾许人间第一流。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/wushiling50"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wushiling50" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2531010934@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">不定时更新一些内容</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">一、计算机网络体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 计算机网络概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%81%E7%BD%91%E7%BB%9C%E3%80%81%E4%BA%92%E8%81%94%E7%BD%91%E3%80%81%E5%9B%A0%E7%89%B9%E7%BD%91%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E5%85%B3%E7%B3%BB"><span class="toc-number">2.1.1.</span> <span class="toc-text">(1)、网络、互联网、因特网的区别与关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E3%80%81%E5%9B%A0%E7%89%B9%E7%BD%91%E7%AE%80%E4%BB%8B"><span class="toc-number">2.1.2.</span> <span class="toc-text">(2)、因特网简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E3%80%81%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E3%80%81%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%E4%BB%A5%E5%8F%8A%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2"><span class="toc-number">2.1.3.</span> <span class="toc-text">(3)、电路交换、分组交换以及报文交换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.2.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-number">2.3.</span> <span class="toc-text">  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-2"><span class="toc-number">2.4.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.4.1.</span> <span class="toc-text">(4)、计算机网络的定义与分类：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%EF%BC%9A-%E6%8C%89%E4%BA%A4%E6%8D%A2%E6%96%B9%E5%BC%8F%E5%88%86%E7%B1%BB%EF%BC%9A%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E3%80%81%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2%E3%80%81%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2-%E6%8C%89%E4%BD%BF%E7%94%A8%E8%80%85%E5%88%86%E7%B1%BB%EF%BC%9A%E5%85%AC%E7%94%A8%E7%BD%91%EF%BC%88Internet%EF%BC%89%E3%80%81%E4%B8%93%E7%94%A8%E7%BD%91%EF%BC%88%E5%86%9B%E9%98%9F%E3%80%81%E9%93%81%E8%B7%AF%EF%BC%89-%E6%8C%89%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8%E5%88%86%E7%B1%BB%EF%BC%9A%E6%9C%89%E7%BA%BF%E7%BD%91%E7%BB%9C%E3%80%81%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C-%E6%8C%89%E8%A6%86%E7%9B%96%E8%8C%83%E5%9B%B4%E5%88%86%E7%B1%BB%EF%BC%9A%E5%B9%BF%E5%9F%9F%E7%BD%91%EF%BC%88WAN%EF%BC%89%E3%80%81%E5%9F%8E%E5%9F%9F%E7%BD%91%EF%BC%88MAN%EF%BC%89%E3%80%81%E5%B1%80%E5%9F%9F%E7%BD%91%EF%BC%88LAN%EF%BC%89%E3%80%81%E4%B8%AA%E5%9F%9F%E7%BD%91%EF%BC%88PAN%EF%BC%89-%E6%8C%89%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB%EF%BC%9A%E6%80%BB%E7%BA%BF%E5%9E%8B%E3%80%81%E6%98%9F%E5%9E%8B%E3%80%81%E7%8E%AF%E5%BD%A2%E3%80%81%E7%BD%91%E7%8A%B6%E5%9E%8B"><span class="toc-number">2.5.</span> <span class="toc-text">分类：- 按交换方式分类：电路交换、报文交换、分组交换- 按使用者分类：公用网（Internet）、专用网（军队、铁路）- 按传输介质分类：有线网络、无线网络- 按覆盖范围分类：广域网（WAN）、城域网（MAN）、局域网（LAN）、个域网（PAN）- 按拓扑结构分类：总线型、星型、环形、网状型  </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87%EF%BC%9A"><span class="toc-number">2.5.1.</span> <span class="toc-text">(5)、计算机网络的性能指标：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-3"><span class="toc-number">2.6.</span> <span class="toc-text">  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%B8%8E%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.7.</span> <span class="toc-text">1.2 计算机网络体系结构与参考模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E3%80%81%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B8%89%E7%A7%8D%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">2.7.1.</span> <span class="toc-text">（1）、常见的三种计算机体系结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%88%86%E5%B1%82%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7"><span class="toc-number">2.7.2.</span> <span class="toc-text">（2）、计算机网络体系结构分层的必要性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%88%86%E5%B1%82%E6%80%9D%E6%83%B3%E4%B8%BE%E4%BE%8B"><span class="toc-number">2.7.3.</span> <span class="toc-text">（3）、计算机网络体系结构分层思想举例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%B8%AD%E7%9A%84%E4%B8%93%E7%94%A8%E6%9C%AF%E8%AF%AD"><span class="toc-number">2.7.4.</span> <span class="toc-text">（4）、计算机网络体系结构中的专用术语</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/computer_networks1/" title="计算机网络_一"><img src="https://s2.loli.net/2024/01/03/PzWqFHtTkrXL8KY.jpg" onerror="this.onerror=null;this.src='https://s2.loli.net/2022/01/13/lsqSbINmozkPFpM.png'" alt="计算机网络_一"/></a><div class="content"><a class="title" href="/2024/01/11/computer_networks1/" title="计算机网络_一">计算机网络_一</a><time datetime="2024-01-11T14:06:00.000Z" title="发表于 2024-01-11 22:06:00">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/04/build-blog/" title="利用GitHub-Page+Hexo去搭建自己的博客"><img src="https://s2.loli.net/2024/01/03/PzWqFHtTkrXL8KY.jpg" onerror="this.onerror=null;this.src='https://s2.loli.net/2022/01/13/lsqSbINmozkPFpM.png'" alt="利用GitHub-Page+Hexo去搭建自己的博客"/></a><div class="content"><a class="title" href="/2024/01/04/build-blog/" title="利用GitHub-Page+Hexo去搭建自己的博客">利用GitHub-Page+Hexo去搭建自己的博客</a><time datetime="2024-01-04T06:50:00.000Z" title="发表于 2024-01-04 14:50:00">2024-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/03/test/" title="postName"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='https://s2.loli.net/2022/01/13/lsqSbINmozkPFpM.png'" alt="postName"/></a><div class="content"><a class="title" href="/2024/01/03/test/" title="postName">postName</a><time datetime="2024-01-03T00:50:00.000Z" title="发表于 2024-01-03 08:50:00">2024-01-03</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/02/hello-world/" title="Hello World">Hello World</a><time datetime="2024-01-02T13:19:11.687Z" title="发表于 2024-01-02 21:19:11">2024-01-02</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By wushiling50</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
